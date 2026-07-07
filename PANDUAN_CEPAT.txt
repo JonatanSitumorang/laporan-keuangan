@@ -1,0 +1,102 @@
+╔════════════════════════════════════════════════════════════════╗
+║           📊 PANDUAN CEPAT - TRACKER PENGELUARAN              ║
+╚════════════════════════════════════════════════════════════════╝
+
+🚀 CARA MEMBUKA APLIKASI
+─────────────────────────
+1. Klik dua kali file: BUKA_WEBSITE.bat
+   ATAU
+2. Buka file index.html dengan browser Anda
+
+⚡ FITUR UTAMA
+──────────────
+✓ Input pengeluaran dengan kategori
+✓ Grafik visual pengeluaran
+✓ Statistik rata-rata per bulan
+✓ Filter data per bulan
+✓ Lihat detail semua pengeluaran
+
+📋 KATEGORI PENGELUARAN
+────────────────────────
+🍔 Makanan      - Makan, snack, minuman
+🚗 Transport    - Bensin, ojek, taksi, parkir
+🛒 Kebutuhan    - Belanja rumah tangga
+🎮 Hiburan      - Bioskop, konser, game
+🏥 Kesehatan    - Dokter, obat, fitness
+📌 Lainnya      - Pengeluaran lainnya
+
+📝 LANGKAH MENGGUNAKAN
+─────────────────────
+1. Pilih TANGGAL pengeluaran
+2. Pilih KATEGORI dari dropdown
+3. Masukkan DESKRIPSI (opsional)
+4. Masukkan JUMLAH uang
+5. Klik "TAMBAH PENGELUARAN"
+6. Data akan otomatis tersimpan
+
+📊 MELIHAT GRAFIK
+────────────────
+- Grafik DONAT: Persentase pengeluaran per kategori
+- Grafik GARIS: Tren pengeluaran 12 bulan terakhir
+- Grafik update otomatis setiap input
+
+💡 RINGKASAN STATISTIK
+─────────────────────
+Lihat di halaman:
+- Total pengeluaran bulan ini
+- Rata-rata pengeluaran per hari
+- Pengeluaran terbesar
+- Jumlah transaksi
+
+🔍 FILTER DETAIL PENGELUARAN
+────────────────────────────
+1. Scroll ke bagian "Detail Pengeluaran"
+2. Pilih bulan yang ingin dilihat
+3. Klik "Reset" untuk lihat semua
+
+🗑️ HAPUS DATA
+─────────────
+- Setiap pengeluaran bisa dihapus dengan tombol "HAPUS"
+- Tombol "HAPUS SEMUA DATA" di footer untuk reset total
+
+💾 PENYIMPANAN DATA
+──────────────────
+✓ Data disimpan otomatis di komputer Anda
+✓ Tidak perlu internet
+✓ Data tetap ada meskipun browser ditutup
+✓ Privasi terjaga (tidak ada cloud)
+
+⚠️ PENTING!
+──────────
+- Jangan kosongkan cache browser jika ingin keep data
+- Backup data penting secara berkala
+- Gunakan deskripsi yang jelas untuk ingatan lebih mudah
+
+📱 BISA DIAKSES DARI
+────────────────────
+✓ Laptop/Desktop
+✓ Tablet
+✓ Smartphone
+✓ Semua browser modern
+
+❓ PERTANYAAN UMUM
+────────────────
+Q: Data bisa dihapus tidak sengaja?
+A: Semua pengeluaran bisa dihapus individual atau sekaligus
+   (tombol ada di setiap pengeluaran dan di footer)
+
+Q: Bisa export data?
+A: Buka F12 > Console, ketik:
+   JSON.stringify(JSON.parse(localStorage.getItem('expenses')), null, 2)
+
+Q: Bisa input riwayat pengeluaran lama?
+A: Ya, pilih tanggal yang berbeda di field "Tanggal"
+
+Q: Apakah aman?
+A: 100% aman, data disimpan lokal di komputer Anda
+
+═══════════════════════════════════════════════════════════════════
+
+Selamat menggunakan! 💰 Kelola keuangan Anda dengan bijak!
+
+Untuk informasi lebih lengkap, baca file: README.md

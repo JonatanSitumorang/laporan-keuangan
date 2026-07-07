@@ -1,0 +1,338 @@
+╔════════════════════════════════════════════════════════════════════╗
+║         📊 SAMPLE DATA - UNTUK TESTING & DEMO APLIKASI            ║
+║         (Opsional - untuk lihat grafik langsung)                  ║
+╚════════════════════════════════════════════════════════════════════╝
+
+BAGAIMANA MENGGUNAKAN FILE INI:
+═══════════════════════════════
+
+Jika Anda ingin langsung melihat aplikasi bekerja dengan data contoh:
+
+CARA 1: MANUAL INPUT (Recommended untuk pemula)
+──────────────────────────────────────────────
+1. Buka aplikasi (buka BUKA_WEBSITE.bat atau index.html)
+2. Input beberapa pengeluaran dari contoh di bawah ini
+3. Data akan auto-save & grafik akan muncul
+
+CARA 2: IMPORT VIA CONSOLE (Untuk advanced user)
+────────────────────────────────────────────────
+1. Buka BUKA_WEBSITE.bat atau index.html
+2. Buka DevTools (tekan F12)
+3. Klik tab "Console"
+4. Copy-paste kode JSON di bawah:
+   localStorage.setItem('expenses', '[...]')
+5. Refresh halaman (F5)
+6. Semua data contoh akan langsung muncul + grafik!
+
+═══════════════════════════════════════════════════════════════════════════
+📋 CONTOH DATA PENGELUARAN (MANUAL INPUT)
+═══════════════════════════════════════════════════════════════════════════
+
+HARI INI (07 JULI 2024):
+───────────────────────
+
+Pagi - Sarapan:
+  Kategori: 🍔 Makanan
+  Deskripsi: Sarapan nasi kuning
+  Jumlah: 15,000
+
+Siang - Makan:
+  Kategori: 🍔 Makanan
+  Deskripsi: Makan siang warung
+  Jumlah: 28,000
+
+Transport:
+  Kategori: 🚗 Transport
+  Deskripsi: Bensin motor
+  Jumlah: 40,000
+
+Belanja:
+  Kategori: 🛒 Kebutuhan
+  Deskripsi: Belanja bahan pokok
+  Jumlah: 120,000
+
+Hiburan:
+  Kategori: 🎮 Hiburan
+  Deskripsi: Makan kopi & baca buku
+  Jumlah: 25,000
+
+Total Hari Ini: Rp 228,000
+───────────────────────────
+
+KEMARIN (06 JULI 2024):
+──────────────────────
+
+Pagi:
+  Kategori: 🍔 Makanan
+  Deskripsi: Sarapan roti
+  Jumlah: 12,000
+
+Siang:
+  Kategori: 🍔 Makanan
+  Deskripsi: Makan siang restoran
+  Jumlah: 45,000
+
+Transport:
+  Kategori: 🚗 Transport
+  Deskripsi: Ojek ke kantor
+  Jumlah: 25,000
+
+Kesehatan:
+  Kategori: 🏥 Kesehatan
+  Deskripsi: Beli vitamin
+  Jumlah: 30,000
+
+Total Kemarin: Rp 112,000
+──────────────────────────
+
+═══════════════════════════════════════════════════════════════════════════
+💻 CARA IMPORT DATA VIA CONSOLE (Advanced)
+═══════════════════════════════════════════════════════════════════════════
+
+STEP 1: BUKA CONSOLE
+───────────────────
+1. Buka aplikasi
+2. Tekan F12 (DevTools)
+3. Klik tab "Console"
+
+STEP 2: COPY-PASTE KODE INI
+──────────────────────────
+
+localStorage.setItem('expenses', JSON.stringify([
+  {
+    "id": 1720320600000,
+    "date": "2024-07-06",
+    "category": "makanan",
+    "description": "Sarapan roti",
+    "amount": 12000
+  },
+  {
+    "id": 1720320700000,
+    "date": "2024-07-06",
+    "category": "makanan",
+    "description": "Makan siang restoran",
+    "amount": 45000
+  },
+  {
+    "id": 1720320800000,
+    "date": "2024-07-06",
+    "category": "transport",
+    "description": "Ojek ke kantor",
+    "amount": 25000
+  },
+  {
+    "id": 1720320900000,
+    "date": "2024-07-06",
+    "category": "kesehatan",
+    "description": "Beli vitamin",
+    "amount": 30000
+  },
+  {
+    "id": 1720350000000,
+    "date": "2024-07-07",
+    "category": "makanan",
+    "description": "Sarapan nasi kuning",
+    "amount": 15000
+  },
+  {
+    "id": 1720350100000,
+    "date": "2024-07-07",
+    "category": "makanan",
+    "description": "Makan siang warung",
+    "amount": 28000
+  },
+  {
+    "id": 1720350200000,
+    "date": "2024-07-07",
+    "category": "transport",
+    "description": "Bensin motor",
+    "amount": 40000
+  },
+  {
+    "id": 1720350300000,
+    "date": "2024-07-07",
+    "category": "kebutuhan",
+    "description": "Belanja bahan pokok",
+    "amount": 120000
+  },
+  {
+    "id": 1720350400000,
+    "date": "2024-07-07",
+    "category": "hiburan",
+    "description": "Makan kopi & baca buku",
+    "amount": 25000
+  },
+  {
+    "id": 1720400000000,
+    "date": "2024-07-01",
+    "category": "makanan",
+    "description": "Makan siang",
+    "amount": 32000
+  },
+  {
+    "id": 1720400100000,
+    "date": "2024-07-01",
+    "category": "transport",
+    "description": "Parkir motor",
+    "amount": 5000
+  },
+  {
+    "id": 1720400200000,
+    "date": "2024-07-02",
+    "category": "kebutuhan",
+    "description": "Belanja groceries",
+    "amount": 150000
+  },
+  {
+    "id": 1720400300000,
+    "date": "2024-07-03",
+    "category": "hiburan",
+    "description": "Tiket bioskop",
+    "amount": 75000
+  },
+  {
+    "id": 1720400400000,
+    "date": "2024-07-04",
+    "category": "kesehatan",
+    "description": "Konsultasi dokter",
+    "amount": 100000
+  },
+  {
+    "id": 1720400500000,
+    "date": "2024-07-05",
+    "category": "makanan",
+    "description": "Snack & minuman",
+    "amount": 35000
+  }
+])); location.reload();
+
+STEP 3: TEKAN ENTER
+──────────────────
+Setelah paste kode di atas, tekan Enter
+Aplikasi akan reload otomatis dengan data contoh!
+
+STEP 4: LIHAT HASILNYA
+─────────────────────
+✓ Grafik donat akan muncul
+✓ Grafik garis akan muncul  
+✓ Statistik akan update
+✓ Detail pengeluaran akan terisi
+
+═══════════════════════════════════════════════════════════════════════════
+📊 YANG BISA ANDA LIHAT DARI DATA CONTOH INI
+═══════════════════════════════════════════════════════════════════════════
+
+DARI GRAFIK DONAT (BULAN INI):
+──────────────────────────────
+- Kategori Makanan: ~38% (tertinggi)
+- Kategori Kebutuhan: ~30%
+- Kategori Hiburan: ~16%
+- Kategori Transport: ~13%
+- Kategori Kesehatan: ~3%
+
+DARI STATISTIK:
+───────────────
+- Total Pengeluaran: Rp 740,000
+- Rata-rata Per Hari: ~Rp 26,428
+- Pengeluaran Terbesar: Rp 150,000 (Kebutuhan)
+- Jumlah Transaksi: 16
+
+DARI GRAFIK GARIS (12 BULAN):
+──────────────────────────────
+Akan menampilkan tren dengan data aktual (16 transaksi di bulan ini)
+
+═══════════════════════════════════════════════════════════════════════════
+💡 TIPS TESTING
+═══════════════════════════════════════════════════════════════════════════
+
+UNTUK TESTING FITUR:
+──────────────────────
+1. Import sample data (langkah di atas)
+2. Lihat semua grafik & statistik muncul
+3. Coba filter per bulan
+4. Coba hapus satu pengeluaran
+5. Lihat grafik & statistik update real-time
+6. Coba tambah pengeluaran baru
+7. Lihat semua update otomatis
+
+UNTUK RESET DATA:
+────────────────
+Klik tombol "HAPUS SEMUA DATA" di footer
+ATAU di Console:
+  localStorage.removeItem('expenses'); location.reload();
+
+═══════════════════════════════════════════════════════════════════════════
+❓ Q&A TENTANG DATA SAMPLE
+═══════════════════════════════════════════════════════════════════════════
+
+Q: Apakah saya harus pakai sample data ini?
+A: TIDAK WAJIB! Anda bisa langsung input data pribadi Anda sendiri.
+   Sample data hanya untuk testing/demo aplikasi.
+
+Q: Bagaimana cara import data?
+A: Ada 2 cara:
+   1. Manual: Input satu-satu sesuai contoh di atas
+   2. Console: Copy-paste kode JSON yang sudah disediakan (lebih cepat)
+
+Q: Bisa pakai data yang berbeda?
+A: BISA! Edit nilai dalam JSON sesuai kebutuhan Anda.
+   Sesuaikan tanggal, kategori, deskripsi, dan jumlah.
+
+Q: Data ini akan selalu ada?
+A: TIDAK! Data akan hilang jika Anda clear cache browser.
+   Untuk keep data: jangan clear cache atau backup regular.
+
+Q: Cara reset setelah test?
+A: Klik "HAPUS SEMUA DATA" atau:
+   localStorage.removeItem('expenses'); location.reload();
+
+═══════════════════════════════════════════════════════════════════════════
+🎯 REKOMENDASI PENGGUNAAN
+═══════════════════════════════════════════════════════════════════════════
+
+UNTUK PEMULA:
+─────────────
+1. Baca 00_BACA_INI_DULU.txt terlebih dahulu
+2. Buka aplikasi
+3. Input 5-10 pengeluaran sendiri (dari contoh di file ini)
+4. Lihat grafik & statistik
+5. Coba semua fitur
+
+UNTUK ADVANCED USER:
+───────────────────
+1. Import sample data via console (copy-paste)
+2. Explore semua fitur
+3. Test filter, delete, update
+4. Modify JSON data sesuai kebutuhan
+5. Reset dan start dengan data pribadi
+
+═══════════════════════════════════════════════════════════════════════════
+📝 FORMAT DATA JSON (JIKA INGIN CUSTOMIZE)
+═══════════════════════════════════════════════════════════════════════════
+
+Setiap pengeluaran memiliki format:
+{
+  "id": 1720320600000,           // Timestamp (unique identifier)
+  "date": "2024-07-06",          // Format: YYYY-MM-DD
+  "category": "makanan",         // Kategori: makanan, transport, kebutuhan, hiburan, kesehatan, lainnya
+  "description": "Sarapan roti", // Deskripsi (free text)
+  "amount": 12000                // Jumlah dalam Rupiah
+}
+
+KATEGORI YANG VALID:
+- makanan
+- transport
+- kebutuhan
+- hiburan
+- kesehatan
+- lainnya
+
+═══════════════════════════════════════════════════════════════════════════
+
+SELAMAT TESTING! Jika ada pertanyaan, baca dokumentasi lainnya:
+- 00_BACA_INI_DULU.txt (start here!)
+- MULAI_SEKARANG.txt
+- PANDUAN_CEPAT.txt
+- README.md
+
+═══════════════════════════════════════════════════════════════════════════

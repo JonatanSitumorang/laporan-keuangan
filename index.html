@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Keuangan - Tracker Pengeluaran</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Laporan Keuangan Pribadi</h1>
+            <p>Kelola dan pantau pengeluaran Anda dengan mudah</p>
+        </header>
+
+        <main>
+            <!-- Section Input Pengeluaran -->
+            <section class="input-section">
+                <div class="card">
+                    <h2>Tambah Pengeluaran</h2>
+                    <form id="expenseForm">
+                        <div class="form-group">
+                            <label for="date">Tanggal:</label>
+                            <input type="date" id="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Kategori:</label>
+                            <select id="category" required>
+                                <option value="">Pilih Kategori</option>
+                                <option value="makanan">🍔 Makanan</option>
+                                <option value="transport">🚗 Transport</option>
+                                <option value="kebutuhan">🛒 Kebutuhan</option>
+                                <option value="hiburan">🎮 Hiburan</option>
+                                <option value="kesehatan">🏥 Kesehatan</option>
+                                <option value="lainnya">📌 Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Deskripsi:</label>
+                            <input type="text" id="description" placeholder="Contoh: Makan siang di restoran">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="amount">Jumlah (Rp):</label>
+                            <input type="number" id="amount" placeholder="0" min="0" required>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Tambah Pengeluaran</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Section Statistik & Grafik -->
+            <section class="charts-section">
+                <div class="card">
+                    <h2>Grafik Pengeluaran Per Kategori (Bulan Ini)</h2>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+
+                <div class="card">
+                    <h2>Tren Pengeluaran Bulanan</h2>
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Section Ringkasan -->
+            <section class="summary-section">
+                <div class="card">
+                    <h2>Ringkasan Bulan Ini</h2>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <span class="label">Total Pengeluaran</span>
+                            <span class="value" id="totalExpense">Rp 0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Rata-rata Per Hari</span>
+                            <span class="value" id="avgPerDay">Rp 0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Pengeluaran Terbesar</span>
+                            <span class="value" id="maxExpense">Rp 0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Jumlah Transaksi</span>
+                            <span class="value" id="transactionCount">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Detail Pengeluaran -->
+            <section class="details-section">
+                <div class="card">
+                    <h2>Detail Pengeluaran</h2>
+                    <div class="filters">
+                        <label for="filterMonth">Filter Bulan:</label>
+                        <input type="month" id="filterMonth">
+                        <button class="btn-secondary" onclick="resetFilter()">Reset</button>
+                    </div>
+                    <div id="expenseList" class="expense-list">
+                        <p class="no-data">Belum ada pengeluaran</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Statistik Kategori -->
+            <section class="stats-section">
+                <div class="card">
+                    <h2>Statistik Per Kategori (Rata-rata Bulanan)</h2>
+                    <div id="categoryStats" class="category-stats">
+                        <p class="no-data">Belum ada data pengeluaran</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Tracker Pengeluaran | Kelola Keuangan Anda dengan Bijak</p>
+            <button class="btn-danger" onclick="clearAllData()">Hapus Semua Data</button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
