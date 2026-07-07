@@ -195,16 +195,23 @@ function updateCategoryChart(monthExpenses) {
         options: {
             responsive: true,
             maintainAspectRatio: true,
+            devicePixelRatio: window.devicePixelRatio || 1,
             plugins: {
                 legend: {
-                    position: 'bottom',
+                    position: window.innerWidth < 768 ? 'bottom' : 'bottom',
                     labels: {
-                        font: { size: 12 },
-                        padding: 15,
-                        usePointStyle: true
+                        font: { size: window.innerWidth < 480 ? 10 : 12 },
+                        padding: window.innerWidth < 480 ? 8 : 15,
+                        usePointStyle: true,
+                        boxPadding: window.innerWidth < 480 ? 3 : 5
                     }
                 },
                 tooltip: {
+                    enabled: true,
+                    backgroundColor: 'rgba(0,0,0,0.8)',
+                    titleFont: { size: window.innerWidth < 480 ? 11 : 12 },
+                    bodyFont: { size: window.innerWidth < 480 ? 10 : 11 },
+                    padding: window.innerWidth < 480 ? 8 : 10,
                     callbacks: {
                         label: function(context) {
                             return 'Rp ' + formatCurrency(context.parsed);
@@ -255,22 +262,30 @@ function updateMonthlyChart() {
                 borderWidth: 2,
                 fill: true,
                 tension: 0.4,
-                pointRadius: 5,
+                pointRadius: window.innerWidth < 480 ? 3 : 5,
                 pointBackgroundColor: '#667eea',
                 pointBorderColor: '#fff',
                 pointBorderWidth: 2,
-                pointHoverRadius: 7
+                pointHoverRadius: window.innerWidth < 480 ? 5 : 7
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: true,
+            devicePixelRatio: window.devicePixelRatio || 1,
             plugins: {
                 legend: {
                     display: true,
-                    labels: { font: { size: 12 } }
+                    labels: { 
+                        font: { size: window.innerWidth < 480 ? 10 : 12 }
+                    }
                 },
                 tooltip: {
+                    enabled: true,
+                    backgroundColor: 'rgba(0,0,0,0.8)',
+                    titleFont: { size: window.innerWidth < 480 ? 10 : 12 },
+                    bodyFont: { size: window.innerWidth < 480 ? 9 : 11 },
+                    padding: window.innerWidth < 480 ? 6 : 10,
                     callbacks: {
                         label: function(context) {
                             return 'Rp ' + formatCurrency(context.parsed.y);
@@ -282,9 +297,15 @@ function updateMonthlyChart() {
                 y: {
                     beginAtZero: true,
                     ticks: {
+                        font: { size: window.innerWidth < 480 ? 9 : 11 },
                         callback: function(value) {
                             return 'Rp ' + formatCurrency(value);
                         }
+                    }
+                },
+                x: {
+                    ticks: {
+                        font: { size: window.innerWidth < 480 ? 8 : 10 }
                     }
                 }
             }

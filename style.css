@@ -340,26 +340,291 @@ footer p {
     }
 }
 
-/* Responsive */
+/* Responsive - Tablet */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        gap: 20px;
     }
 
     .card {
-        padding: 15px;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px;
+        font-size: 16px; /* Prevent zoom on iOS */
     }
 
     .summary-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .summary-item {
+        padding: 15px;
+    }
+
+    .summary-item .value {
+        font-size: 1.2rem;
+    }
+
+    .charts-section {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .category-stats {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .expense-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .expense-amount {
+        width: 100%;
+        text-align: left;
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .btn-delete {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filters input {
+        max-width: 100%;
+    }
+
+    .filters label {
+        margin-bottom: 5px;
+    }
+
+    .btn-secondary {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    main {
+        gap: 15px;
+    }
+
+    .card {
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px 8px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+    .btn-primary {
+        padding: 10px;
+        font-size: 0.9rem;
+        margin-top: 8px;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .summary-item {
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .summary-item .label {
+        font-size: 0.75rem;
+    }
+
+    .summary-item .value {
+        font-size: 1rem;
+    }
+
+    .expense-item {
+        padding: 10px;
+        margin-bottom: 8px;
+        border-radius: 6px;
+    }
+
+    .expense-category {
+        font-size: 0.9rem;
+        margin-bottom: 3px;
+    }
+
+    .expense-description {
+        font-size: 0.8rem;
+        margin-bottom: 2px;
+    }
+
+    .expense-date {
+        font-size: 0.75rem;
+    }
+
+    .expense-amount {
+        font-size: 1rem;
+        margin-top: 8px;
+        padding-top: 8px;
+        width: 100%;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .btn-delete {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .filters label {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+
+    .filters input {
+        max-width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn-secondary {
+        padding: 8px;
+        font-size: 0.8rem;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 4px;
+    }
+
+    .stat-card {
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .stat-category {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .stat-info {
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        margin-bottom: 8px;
+    }
+
+    .btn-danger {
+        padding: 8px;
+        font-size: 0.8rem;
+        margin-top: 8px;
+        width: 100%;
     }
 }
 
